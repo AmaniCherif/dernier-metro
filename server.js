@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 
-// Middleware: logs simples
 app.use((req, res, next) => {
   const start = Date.now();
   res.on("finish", () => {
@@ -62,5 +61,5 @@ app.use((req, res) => {
 // Lancement serveur
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`🚀 Dernier Metro API running on port ${PORT}`);
+  console.log(`Dernier Metro API running on port ${PORT}`);
 });
