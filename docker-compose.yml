@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  dernier-metro:
+    build:
+      context: .
+      dockerfile: Dockerfile.v1
+    ports:
+      - "3000:3000"
+    environment:
+      HEADWAY_MIN: 3
+      LAST_WINDOW_START: "00:45"
+      SERVICE_END: "01:15"
